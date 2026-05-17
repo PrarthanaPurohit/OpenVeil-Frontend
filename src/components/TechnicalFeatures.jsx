@@ -14,8 +14,8 @@ export default function TechnicalFeatures() {
   return (
     <section id="tech" style={{ paddingTop: '80px', paddingBottom: '80px', borderTop: '1px solid var(--border)' }}>
       <div className="fade-in delay-3">
-        <h2 style={{ fontSize: '36px', marginBottom: '16px', textAlign: 'center' }}>Core Technical Features</h2>
-        <p style={{ fontSize: '18px', color: 'var(--text-muted)', marginBottom: '64px', textAlign: 'center' }}>
+        <h2 className="section-title" style={{ textAlign: 'center' }}>Core Technical Features</h2>
+        <p className="section-subtitle" style={{ textAlign: 'center' }}>
           A robust, mathematically verifiable workflow designed for trustless environments.
         </p>
 

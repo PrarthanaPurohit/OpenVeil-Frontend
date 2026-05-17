@@ -4,26 +4,19 @@ export default function Hero() {
   return (
     <section className="hero two-column">
       <div className="hero-content fade-in delay-2">
-        <h1 style={{ fontSize: '64px', marginBottom: '24px' }}>
+        <h1 className="hero-title">
           Capture the Truth.<br/>
           <span style={{ color: 'var(--text-muted)' }}>Cryptographically Sealed.</span>
         </h1>
-        <p style={{ fontSize: '20px', color: 'var(--text-muted)', marginBottom: '32px' }}>
+        <p className="hero-subtitle">
           OpenVeilCam provides hardware-linked, censorship-resistant image capture built on the Nostr protocol. Because human rights start with undeniable facts.
         </p>
-        <div style={{ display: 'flex', gap: '16px' }}>
+        <div className="hero-buttons">
           <a href="#about" className="btn btn-primary">About Project</a>
           <a href="#tech" className="btn btn-secondary">Technical Architecture</a>
         </div>
       </div>
-      <div className="hero-visual glass-panel fade-in delay-3" style={{ 
-        padding: '24px', 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        minHeight: '400px', 
-        background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(240,240,240,0.5))' 
-      }}>
+      <div className="hero-visual glass-panel fade-in delay-3 hero-visual-panel">
         <div style={{ textAlign: 'center' }}>
           <div style={{ 
             width: '120px', 

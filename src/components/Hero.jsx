@@ -35,7 +35,7 @@ export default function Hero() {
             </svg>
           </div>
           <h3 style={{ fontSize: '22px' }}>Verified via Hardware</h3>
-          <p style={{ color: 'var(--text-muted)', marginTop: '8px', maxWidth: '200px', margin: '8px auto 0' }}>
+          <p style={{ color: 'var(--text-muted)', marginTop: '8px', maxWidth: '200px', margin: '8px auto 0', textAlign: 'left' }}>
             Cryptographic proof of origin, sealed at the sensor level.
           </p>
         </div>

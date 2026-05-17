@@ -11,8 +11,8 @@ function App() {
           <span className="logo-dot"></span>
           OpenVeil
         </div>
-        <nav className="fade-in delay-1">
-          <a href="#about" className="btn btn-secondary" style={{ marginRight: '12px' }}>About Project</a>
+        <nav className="nav-links fade-in delay-1">
+          <a href="#about" className="btn btn-secondary">About Project</a>
           <a href="https://github.com/PrarthanaPurohit/OpenVeilCam" target="_blank" rel="noopener noreferrer" className="btn btn-primary">GitHub</a>
         </nav>
       </header>
@@ -22,7 +22,7 @@ function App() {
         <TechnicalFeatures />
       </main>
       <footer>
-        <p>&copy; {new Date().getFullYear()} OpenVeilCam Project. Dedicated to securing truth.</p>
+        <p>&copy; {new Date().getFullYear()} OpenVeil. Dedicated to securing truth.</p>
       </footer>
     </div>
   )

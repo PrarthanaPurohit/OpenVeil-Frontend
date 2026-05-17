@@ -36,7 +36,7 @@ export default function Hero() {
           </div>
           <h3 style={{ fontSize: '22px' }}>Verified via Hardware</h3>
           <p style={{ color: 'var(--text-muted)', marginTop: '8px', maxWidth: '200px', margin: '8px auto 0' }}>
-            ECDSA signatures linked to exact sensor frames.
+            Cryptographic proof of origin, sealed at the sensor level.
           </p>
         </div>
       </div>

@@ -12,7 +12,13 @@ export default function Hero() {
           OpenVeilCam provides hardware-linked, censorship-resistant image capture built on the Nostr protocol. Because human rights start with undeniable facts.
         </p>
         <div className="hero-buttons">
-          <a href="#about" className="btn btn-primary">About Project</a>
+          <a href="https://primal.net/e/nevent1qqsyyf8qyqqyadhklsxkuvdcsw7lfddha008e6v5p0ln20veun98p4q7r0xqa" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: '8px', display: 'inline-block', verticalAlign: 'middle' }}>
+              <polygon points="6 23 21 12 6 1 6 23"></polygon>
+            </svg>
+            Watch Demo Video
+          </a>
+          <a href="#about" className="btn btn-secondary">About Project</a>
           <a href="#tech" className="btn btn-secondary">Technical Architecture</a>
         </div>
       </div>

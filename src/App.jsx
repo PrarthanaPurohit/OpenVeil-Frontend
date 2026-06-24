@@ -1,6 +1,7 @@
 import './App.css'
 import Hero from './components/Hero'
 import Proposal from './components/Proposal'
+import CliWalkthrough from './components/CliWalkthrough'
 import TechnicalFeatures from './components/TechnicalFeatures'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <main>
         <Hero />
         <Proposal />
+        <CliWalkthrough />
         <TechnicalFeatures />
       </main>
       <footer>

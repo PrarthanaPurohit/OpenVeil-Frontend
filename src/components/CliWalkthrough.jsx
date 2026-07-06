@@ -10,43 +10,43 @@ export default function CliWalkthrough() {
     {
       tabLabel: "1. Device Identity",
       cmd: "OpenVeilCam --init",
-      title: "Cryptographic Identity Initialization",
+      title: "Hardware-Linked Cryptographic Identity",
       image: cliInitImg,
-      badge: "Security",
-      desc: "Upon booting, the CLI runtime loads hardware entropy (CPU serial, MAC address) to derive a secure device-bound keypair. This establishes a unique cryptographic identity for the camera module.",
+      badge: "Identity",
+      desc: "Each device generates a deterministic secp256k1 identity derived from hardware characteristics and a securely persisted salt. The resulting keypair remains stable across reboots, allowing the device to establish a verifiable cryptographic identity compatible with Nostr.",
       details: [
-        { label: "Hardware Binding", value: "Raspberry Pi camera sensor & SoC" },
-        { label: "Identity Derivation", value: "Deterministic DeviceIdentity" },
-        { label: "Nostr Key (npub)", value: "npub14ydv5h7a6ljufragw2wd095t..." },
-        { label: "Ethereum Address", value: "0x24cbfa681810be77a107cd9b0..." }
+        { label: "Deterministic device identity", value: "" },
+        { label: "Hardware-linked key generation", value: "" },
+        { label: "Nostr compatible", value: "" },
+        { label: "Secure salt persistence", value: "" }
       ]
     },
     {
       tabLabel: "2. Capture Frame",
       cmd: "OpenVeilCam capture",
-      title: "Direct Sensor Frame Capture",
+      title: "Capture Authentic Media",
       image: cliCaptureImg,
-      badge: "Hardware",
-      desc: "When the capture command is executed, the runtime interfaces directly with the IMX708 sensor. It configures dual RAW and YUV streams to capture raw, unadulterated pixels without any software filters.",
+      badge: "Capture",
+      desc: "A high-quality JPEG is captured and treated as the canonical source for integrity verification. The media remains unchanged before cryptographic attestation, preserving a verifiable chain of trust.",
       details: [
-        { label: "Sensor Model", value: "IMX708 10-bit RGGB (4608x2592)" },
-        { label: "Image Format", value: "1920x1080 YUV420 / RAW" },
-        { label: "Processing", value: "No temporal denoise (pixel integrity)" },
-        { label: "Local Output", value: "/tmp/nostreye_capture.jpg" }
+        { label: "Image pipeline initialization", value: "" },
+        { label: "High-resolution JPEG capture", value: "" },
+        { label: "Canonical image used for signing", value: "" },
+        { label: "No metadata manipulation before attestation", value: "" }
       ]
     },
     {
       tabLabel: "3. Sign & Publish",
       cmd: "OpenVeilCam publish",
-      title: "ECDSA Signature & Nostr Broadcast",
+      title: "Cryptographically Verify and Publish",
       image: cliPublishImg,
-      badge: "Decentralized",
-      desc: "The captured frame is hashed and signed with the device's hardware-derived private key. It is uploaded to decentralized Blossom servers and broadcast to Nostr relays as cryptographically signed events.",
+      badge: "Publish",
+      desc: "The captured image is signed using the device's private key, creating a cryptographic attestation of its contents. The image is then uploaded to Blossom while provenance information including the image hash, signature, and metadata is published to Nostr, enabling anyone to independently verify its authenticity.",
       details: [
-        { label: "Integrity Proof", value: "ECDSA SHA-256 digital signature" },
-        { label: "Relay Outbox", value: "nos.lol, primal.net, snort.social" },
-        { label: "Nostr Event", value: "Kind 1063 (File Metadata) & Kind 1" },
-        { label: "Blossom Server", value: "https://blossom.band" }
+        { label: "ECDSA image attestation", value: "" },
+        { label: "Blossom media storage", value: "" },
+        { label: "NIP-94 metadata publication", value: "" },
+        { label: "Public verification via Nostr relays", value: "" }
       ]
     }
   ];
@@ -111,15 +111,12 @@ export default function CliWalkthrough() {
               <p className="cli-step-desc">{steps[activeTab].desc}</p>
 
               <div className="cli-details-card">
-                <h4 className="details-header">Key Attestations</h4>
-                <div className="details-grid">
+                <h4 className="details-header">Highlights</h4>
+                <ul className="details-list">
                   {steps[activeTab].details.map((detail, dIdx) => (
-                    <div key={dIdx} className="details-row">
-                      <span className="details-label">{detail.label}:</span>
-                      <span className="details-value">{detail.value}</span>
-                    </div>
+                    <li key={dIdx} className="details-item">{detail.label}</li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </div>

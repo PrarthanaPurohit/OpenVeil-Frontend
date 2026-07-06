@@ -9,7 +9,7 @@ function App() {
     <div className="app-container fade-in">
       <header>
         <div className="logo fade-in delay-1">
-          <span className="logo-dot"></span>
+          <span className=""></span>
           OpenVeil
         </div>
         <nav className="nav-links fade-in delay-1">

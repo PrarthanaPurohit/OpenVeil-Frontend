@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import cliInitImg from '../assets/cli-1-init.png';
 import cliCaptureImg from '../assets/cli-2-capture.png';
 import cliPublishImg from '../assets/cli-3-publish.png';
 
 export default function CliWalkthrough() {
   const [activeTab, setActiveTab] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsLightboxOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const steps = [
     {
@@ -93,12 +105,32 @@ export default function CliWalkthrough() {
                   src={steps[activeTab].image}
                   alt={steps[activeTab].title}
                   className="cli-screenshot"
+                  onClick={() => setIsLightboxOpen(true)}
                 />
                 <div className="cli-overlay-hint">
-                  <span>Terminal Output Screenshot</span>
+                  <span>Terminal Output Screenshot — click to expand</span>
                 </div>
               </div>
             </div>
+
+            {isLightboxOpen && (
+              <div className="cli-lightbox-overlay" onClick={() => setIsLightboxOpen(false)}>
+                <div className="cli-lightbox-content" onClick={(event) => event.stopPropagation()}>
+                  <button
+                    className="cli-lightbox-close"
+                    onClick={() => setIsLightboxOpen(false)}
+                    aria-label="Close screenshot preview"
+                  >
+                    ×
+                  </button>
+                  <img
+                    src={steps[activeTab].image}
+                    alt={steps[activeTab].title}
+                    className="cli-lightbox-image"
+                  />
+                </div>
+              </div>
+            )}
 
             {/* Info Panel */}
             <div className="terminal-info-area">

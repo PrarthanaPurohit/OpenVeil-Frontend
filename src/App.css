@@ -19,8 +19,29 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 12px;
+  gap: 6px;
   align-items: center;
+}
+
+/* Section links are plain text rather than pills: four pills beside the GitHub
+   button and the theme toggle read as six competing buttons. */
+.nav-link {
+  padding: 8px 12px;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  background: var(--hover-tint);
+}
+
+.nav-links .btn-primary {
+  margin-left: 6px;
 }
 
 .logo {
@@ -68,6 +89,12 @@ main {
 
 section {
   padding: 100px 0;
+}
+
+/* The header is sticky, so an anchor jump would otherwise park the section
+   title underneath it. */
+section[id] {
+  scroll-margin-top: 96px;
 }
 
 footer {
@@ -137,15 +164,28 @@ footer {
   }
 
   header {
+    /* Six nav items wrap to two rows on a phone, which makes the header tall
+       enough that keeping it stuck to the top would cost a quarter of the
+       viewport. It scrolls away here instead. */
+    position: static;
     padding: 16px 20px;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
   }
 
   .nav-links {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  section[id] {
+    scroll-margin-top: 24px;
   }
 }
 

@@ -24,8 +24,15 @@ function App() {
           OpenVeil
         </div>
         <nav className="nav-links fade-in delay-1">
-          <a href="#about" className="btn btn-secondary">About</a>
-          <a href="#verify" className="btn btn-secondary">Verify</a>
+          {/* Ordered to match the page, so the nav doubles as a table of contents.
+              The last two are shortened: their section headings are too long to
+              sit in a nav bar. */}
+          <a href="#about" className="nav-link">About</a>
+          <a href="#chain" className="nav-link">Chain</a>
+          <a href="#walkthrough" className="nav-link">See it in action</a>
+          <a href="#verify" className="nav-link">Verify</a>
+          <a href="#tech" className="nav-link">Features</a>
+          <a href="#limits" className="nav-link">Limits</a>
           <a href={REPO} target="_blank" rel="noopener noreferrer" className="btn btn-primary">GitHub</a>
           <ThemeToggle />
         </nav>

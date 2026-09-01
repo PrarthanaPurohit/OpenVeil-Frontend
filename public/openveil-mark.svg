@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" role="img" aria-label="OpenVeil">
+  <!-- Aperture mark: an open shutter ring with a veiled (partially drawn) blade.
+       Ported from androidApp/src/main/res/drawable/ic_launcher_foreground.xml.
+       Strokes use currentColor, so the mark takes the colour of the text around it
+       and works in both the light and dark themes. -->
+  <g stroke="currentColor" stroke-width="3.6" stroke-linecap="round">
+    <circle cx="24" cy="24" r="19" />
+    <path d="M24 5 L24 24 L40.1 33.5" />
+  </g>
+  <rect x="21.8" y="21.8" width="4.4" height="4.4" fill="currentColor" />
+</svg>

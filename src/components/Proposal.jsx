@@ -1,9 +1,7 @@
-import React from 'react';
-
 export default function Proposal() {
   return (
-    <section id="about" style={{ paddingTop: '80px', borderTop: '1px solid var(--border)' }}>
-      <div className="fade-in delay-2" style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <section id="about" className="section-divider">
+      <div className="fade-in delay-2 narrow">
         <h2 className="section-title">About the Project</h2>
         <p className="section-subtitle">
           A decentralized media provenance and verification system.
@@ -12,11 +10,35 @@ export default function Proposal() {
         <div className="glass-panel proposal-panel">
           <h3>The Problem</h3>
           <p>
-            The project addresses the growing problem of censorship, synthetic media, and declining trust in digital evidence. Journalists, activists, and human rights defenders increasingly face situations where authentic media is dismissed as fake or AI-generated, while centralized platforms censor or remove sensitive evidence. Existing systems lack reliable ways to prove that media came from a trusted device and remained untampered.
+            Photographic evidence is losing its evidentiary value. Generative models can
+            produce convincing images of events that never happened, and their existence
+            does something worse: it gives anyone caught on camera a ready denial. A
+            journalist or human rights investigator who publishes a genuine photograph now
+            has to argue for its authenticity, with no better tool for that argument than
+            their own credibility.
           </p>
-          <h3>The Solution: Decentralized Verifiability</h3>
           <p>
-            A decentralized media provenance and verification system using Raspberry Pi-based trusted camera hardware, cryptographic signing, deterministic and ZKP-compatible media processing, decentralized communication, and distributed storage. Images are cryptographically signed at capture, processed through deterministic workflows, and published using decentralized protocols such as Nostr and IPFS-compatible systems. This enables independent verification even if metadata is stripped or files are recompressed.
+            The usual answer is a trusted platform that vouches for uploads. That fails
+            exactly where it matters most. A platform can be pressured, can be blocked in
+            the jurisdiction that needs it, can lose interest, and can quietly delete.
+            Anyone whose safety depends on a photograph remaining verifiable cannot afford
+            a verifier with a business model.
+          </p>
+
+          <h3>The Approach</h3>
+          <p>
+            OpenVeil replaces institutional trust with a chain anyone can check
+            independently. Every capture leaves the phone carrying a{' '}
+            <a href="https://c2pa.org" target="_blank" rel="noopener noreferrer">C2PA</a>{' '}
+            manifest bound to its exact bytes, is stored content-addressed on Blossom, and
+            is announced in a signed NIP-94 event replicated across Nostr relays that no
+            single party owns.
+          </p>
+          <p>
+            Each link is verifiable on its own, and nothing in the chain asks you to trust
+            OpenVeil or its author. The verification procedure below uses public
+            infrastructure and standard tools. None of it runs on a server this project
+            controls.
           </p>
         </div>
       </div>

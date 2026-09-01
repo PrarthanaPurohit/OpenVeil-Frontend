@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" role="img" aria-label="OpenVeil">
+  <!-- Tile version for the favicon and any place the mark needs its own ground.
+       Colours match the shipped Android launcher icon exactly: the foreground is
+       OpenVeilColors.Primary (#C4C0FF) and the ground is openveil_background (#13121B). -->
+  <rect width="48" height="48" rx="11" fill="#13121B" />
+  <g stroke="#C4C0FF" stroke-width="2.9" stroke-linecap="round">
+    <circle cx="24" cy="24" r="15" />
+    <path d="M24 9 L24 24 L36.7 31.5" />
+  </g>
+  <rect x="22.27" y="22.27" width="3.46" height="3.46" fill="#C4C0FF" />
+</svg>

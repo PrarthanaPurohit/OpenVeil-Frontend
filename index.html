@@ -3,7 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenVeil</title>
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="description"
+      content="OpenVeil signs a photograph with C2PA Content Credentials at the shutter, stores it content-addressed on Blossom, and publishes the proof to Nostr relays no single party controls."
+    />
+    <link rel="icon" type="image/svg+xml" href="/openveil-icon.svg" />
+    <title>OpenVeil · Capture the truth, cryptographically sealed</title>
+    <script>
+      // Apply a stored theme before first paint so the page never flashes the
+      // wrong one. With no stored choice the CSS cascade decides: the OS
+      // preference if it states one, dark otherwise.
+      (function () {
+        try {
+          var stored = localStorage.getItem('openveil-theme');
+          if (stored === 'light' || stored === 'dark') {
+            document.documentElement.setAttribute('data-theme', stored);
+          }
+        } catch (e) {
+          /* storage unavailable; fall through to the system preference */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

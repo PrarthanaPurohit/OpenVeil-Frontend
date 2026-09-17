@@ -179,9 +179,10 @@ footer {
     flex-wrap: wrap;
   }
 
+  /* Touch targets: 40px minimum on anything tappable. */
   .nav-link {
     font-size: 14px;
-    padding: 6px 10px;
+    padding: 10px 12px;
   }
 
   section[id] {
@@ -1071,6 +1072,17 @@ footer {
   align-items: start;
 }
 
+/* Grid and flex children default to min-width:auto, which lets a <pre> with
+   long command lines widen its whole column past the viewport rather than
+   scroll. Every ancestor between the pre and the section needs the guard. */
+.verify-layout > *,
+.verify-step > *,
+.verify-steps,
+.code-block {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .verify-aside {
   position: sticky;
   top: 120px;
@@ -1194,5 +1206,66 @@ footer {
   .walkthrough-body .phone-frame,
   .verify-aside .phone-frame {
     height: 520px;
+  }
+}
+
+/* Phone-width fixes. These come last on purpose: they override same-specificity
+   rules above, and source order is what makes them win. */
+@media (max-width: 768px) {
+  /* Touch targets. */
+  .walkthrough-tab {
+    padding: 10px 16px;
+  }
+
+  .walkthrough-expand {
+    padding: 10px 0;
+  }
+
+  .footer-col a {
+    display: inline-block;
+    padding: 4px 0;
+  }
+
+  /* 11px labels are legible on a desktop and not on a phone. */
+  .tag,
+  .proof-note,
+  .proof-foot,
+  .walkthrough-tab-num {
+    font-size: 12px;
+  }
+
+  /* The app screenshots were cropped to a fixed height beside a column of text.
+     Stacked on a phone there is nothing beside them, so show the whole screen
+     at a width that reads, rather than a 188px sliver the grid shrank them to. */
+  .walkthrough-body .phone-frame,
+  .verify-aside .phone-frame {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .walkthrough-body .phone-screen,
+  .verify-aside .phone-screen {
+    height: auto;
+    object-fit: fill;
+  }
+
+  .walkthrough-body .phone-frame::after,
+  .verify-aside .phone-frame::after {
+    display: none;
+  }
+
+  .verify-aside .phone-frame {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Commands wrap rather than scroll sideways: a hidden tail on a phone is
+     worse than a broken line, and these get copied, not read for shape. */
+  .code-block {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
   }
 }

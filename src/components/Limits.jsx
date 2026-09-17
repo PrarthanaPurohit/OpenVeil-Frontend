@@ -8,11 +8,6 @@ const limits = [
     title: 'The certificate is self-signed',
     desc:
       'C2PA validators will report the manifest as valid but not trusted. That is deliberate, and explained above, but if your workflow requires a trust-listed certificate then this is not yet that.'
-  },
-  {
-    title: 'This is a proof of concept',
-    desc:
-      'The full pipeline from capture to signing to storage to publication to verification runs end to end against live public infrastructure. It has not been audited, hardened, or run in an adversarial deployment. Treat it as a working demonstration of an architecture, not as software to stake someone’s safety on today.'
   }
 ];
 
@@ -42,10 +37,7 @@ export default function Limits() {
             <ul>
               <li>That the photographer was where they claim to have been.</li>
               <li>That any note attached to the image is true.</li>
-              <li>
-                Who the photographer is. In this proof of concept, the key identifies a
-                device, not a person.
-              </li>
+              <li>Who the photographer is. The key identifies a device, not a person.</li>
             </ul>
           </div>
         </div>

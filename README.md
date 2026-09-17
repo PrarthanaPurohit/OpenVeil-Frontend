@@ -15,7 +15,7 @@ Android runs the full pipeline today. `c2pa-bridge` publishes credentials minted
 ## Site Conventions
 
 - **No third-party requests.** No analytics, no trackers, no externally hosted fonts. Visitors to this site may be at risk, and a request to another origin is a logged visit. Everything is self-hosted.
-- **Only claim what ships.** Anything not implemented belongs in the "Not built yet" section, labelled as such.
+- **Only claim what ships.** Anything not implemented belongs in the "What comes next" section, tagged Planned.
 - **Dark by default, OS preference respected.** Themes are driven by CSS custom properties in `src/index.css`, resolved in this order: an explicit choice from the header toggle (`data-theme` on `<html>`, remembered in `localStorage`), then an explicit OS `prefers-color-scheme`, then dark. An inline script in `index.html` applies a stored choice before first paint. Note that browsers no longer report "no preference" for `prefers-color-scheme`, so an untouched OS resolves to light in practice; the dark fallback only catches browsers that do not support the query.
 
 ## Development Setup

@@ -2,12 +2,12 @@ const items = [
   {
     title: 'Zero-knowledge proofs',
     desc:
-      'The architecture is meant to accommodate a layer that proves a capture is authentic without revealing which device produced it. Nothing of it is built yet.'
+      'A layer that proves a capture is authentic without revealing which device produced it. The chain was designed with room for it: the proof would sit on the same hash the manifest and the event already share.'
   },
   {
     title: 'iOS, desktop and web clients',
     desc:
-      'The app’s domain layer is already platform-neutral, so these are additive. Android is the only one that runs today.'
+      'The app’s domain layer is already platform-neutral, so each of these is an additional front end on the same pipeline rather than a rewrite. Android runs today and sets the pattern.'
   }
 ];
 
@@ -15,10 +15,9 @@ export default function Roadmap() {
   return (
     <section id="roadmap" className="section-divider">
       <div className="fade-in delay-2">
-        <h2 className="section-title text-center">Not built yet</h2>
+        <h2 className="section-title text-center">What comes next</h2>
         <p className="section-subtitle text-center">
-          Intended directions, listed here rather than among the features, because neither
-          of them ships today.
+          Two directions the architecture was built to grow into.
         </p>
 
         <div className="roadmap-grid">

@@ -35,8 +35,8 @@ export default function TechnicalFeatures() {
       <div className="fade-in delay-3">
         <h2 className="section-title text-center">Core Technical Features</h2>
         <p className="section-subtitle text-center">
-          What runs today. Anything still on the drawing board is listed under{' '}
-          <a href="#roadmap">Not built yet</a>.
+          What runs today. The next steps are under{' '}
+          <a href="#roadmap">What comes next</a>.
         </p>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>

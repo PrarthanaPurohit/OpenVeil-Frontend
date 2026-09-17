@@ -45,26 +45,6 @@ export default function Chain() {
             </div>
           ))}
         </div>
-
-        <div className="binding-callout">
-          <h3>The chain closes in both directions</h3>
-          <p>
-            The C2PA manifest names the Nostr public key that published it, and the Nostr
-            event names the hash of the file that manifest is bound to. Neither half can be
-            swapped for another without the mismatch showing.
-          </p>
-          <div className="binding-pair">
-            <div className="binding-leg">
-              <strong>manifest &rarr; event</strong>
-              A <code>world.openveil.nostr</code> assertion carries the device npub, its hex
-              pubkey and the <code>px1</code> hash.
-            </div>
-            <div className="binding-leg">
-              <strong>event &rarr; manifest</strong>
-              The NIP-94 tags carry the SHA-256 of the signed file the manifest is bound to.
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

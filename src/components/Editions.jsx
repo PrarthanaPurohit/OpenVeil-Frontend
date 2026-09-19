@@ -7,6 +7,7 @@ const editions = [
       'A Kotlin Multiplatform client that signs at the shutter, uploads the signed original to Blossom, publishes the NIP-94 event, and can re-verify a capture against its stored bytes on the device itself. The domain layer is platform-neutral, so iOS, desktop and web are additive rather than rewrites.',
     points: [
       'Home, camera, review, publishing, details',
+      'Publish under your own account via Amber or a bunker, never an nsec',
       'On-device re-verification',
       'iOS, desktop and web planned'
     ]

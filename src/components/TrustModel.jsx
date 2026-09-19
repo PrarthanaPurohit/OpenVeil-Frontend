@@ -29,6 +29,12 @@ export default function TrustModel() {
               nothing to leak, and it is why the app shows you an npub rather than offering
               to hand over a key.
             </p>
+            <p style={{ marginTop: '16px' }}>
+              Want captures under your own name? Link the account you already have through
+              Amber or a NIP-46 bunker. Your account signs the Nostr event, the device key
+              still signs the credential, and the event names both. There is no field to
+              paste an nsec, and a seized phone cannot give up an identity it never held.
+            </p>
           </div>
 
           <div className="trust-card glass-panel">

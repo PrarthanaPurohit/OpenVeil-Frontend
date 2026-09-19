@@ -13,6 +13,10 @@ export default function TechnicalFeatures() {
       desc: "Deterministic keypairs derived from device entropy and a persisted salt. The secret exists only in memory during signing, is never written to disk, and is never exported as an nsec."
     },
     {
+      title: "Publish as the device, or as yourself",
+      desc: "Link your own Nostr account through Amber (NIP-55) or any NIP-46 bunker, never by pasting an nsec. The device key always signs the credential; your account can sign the announcement. Chosen per photo, defaulting to the device, so a persistent public identity is opted into one capture at a time."
+    },
+    {
       title: "Content-addressed storage",
       desc: "Blossom stores the signed bytes under their own hash, so the URL is the fingerprint. A substituted file cannot be served in place of the original without the mismatch showing."
     },

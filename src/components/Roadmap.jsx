@@ -2,7 +2,7 @@ const items = [
   {
     title: 'OpenVeil SDK',
     desc:
-      'The publish pipeline as a library other apps can embed: sign a C2PA manifest at capture, upload to Blossom, announce on Nostr and re-verify, behind one small API. The app already keeps this logic in its own module behind a single entry point, separate from the UI. The SDK gives that module a public API designed for other people’s code, Android first, so a newsroom tool or another camera app can publish captures that verify exactly like ours.'
+      'OpenVeil is an Android app today. The next step is a cross-platform SDK built on the same code: sign a C2PA manifest at capture, upload to Blossom, announce on Nostr and re-verify, behind one small API that works on Android, iOS, desktop and web. The pipeline already lives in a Kotlin Multiplatform module separate from the UI; the SDK gives it a public API designed for other people’s code, so a newsroom tool or another camera app on any platform can publish captures that verify exactly like ours.'
   },
   {
     title: 'Zero-knowledge proofs',

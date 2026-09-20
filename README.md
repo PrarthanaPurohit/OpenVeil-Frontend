@@ -23,7 +23,7 @@ Android runs the full pipeline today. `c2pa-bridge` publishes credentials minted
 This project uses [Vite](https://vitejs.dev/) and React.
 
 ### Prerequisites
-- Node.js (v18+ recommended)
+- Node.js 20.19+ or 22.12+ (required by Vite 8)
 - npm or yarn
 
 ### Running Locally

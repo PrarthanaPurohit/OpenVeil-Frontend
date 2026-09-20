@@ -1,5 +1,10 @@
 const items = [
   {
+    title: 'OpenVeil SDK',
+    desc:
+      'The publish pipeline as a library other apps can embed: sign a C2PA manifest at capture, upload to Blossom, announce on Nostr and re-verify, behind one small API. The app already keeps this logic in a platform-neutral module with no UI or networking types in its public surface; the SDK is that module packaged for others, so a newsroom tool or another camera app can publish captures that verify exactly like ours.'
+  },
+  {
     title: 'Zero-knowledge proofs',
     desc:
       'A layer that proves a capture is authentic without revealing which device produced it. The chain was designed with room for it: the proof would sit on the same hash the manifest and the event already share.'
@@ -17,7 +22,7 @@ export default function Roadmap() {
       <div className="fade-in delay-2">
         <h2 className="section-title text-center">What comes next</h2>
         <p className="section-subtitle text-center">
-          Two directions the architecture was built to grow into.
+          Three directions the architecture was built to grow into.
         </p>
 
         <div className="roadmap-grid">
